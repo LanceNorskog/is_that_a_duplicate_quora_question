@@ -15,7 +15,7 @@ from keras import backend as K
 from keras.layers.advanced_activations import PReLU
 from keras.preprocessing import sequence, text
 
-data = pd.read_csv('data/quora_duplicate_questions.tsv', sep='\t')
+data = pd.read_csv('/tmp/data/quora_duplicate_questions.tsv', sep='\t')
 y = data.is_duplicate.values
 
 tk = text.Tokenizer(nb_words=200000)
@@ -33,7 +33,7 @@ word_index = tk.word_index
 ytrain_enc = np_utils.to_categorical(y)
 
 embeddings_index = {}
-f = open('data/glove.840B.300d.txt')
+f = open('/tmp/data/glove.840B.300d.txt')
 for line in tqdm(f):
     values = line.split()
     word = values[0]
