@@ -1,0 +1,11 @@
+pandas
+numpy
+scikit-learn
+nltk
+tqdm
+keras
+tensorflow
+pyemd
+fuzzywuzzy
+python-levenshtein
+gensim
